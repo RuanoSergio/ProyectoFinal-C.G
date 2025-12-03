@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Consultar / Cancelar Cita</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+<body>
+  <header>
+    <div class='logo'>BarberShop Style</div>
+    <nav>
+      <ul>
+        <li><a href='index.html'>Inicio</a></li>
+        <li><a href='servicios.html'>Servicios</a></li>
+        <li><a href='promociones.html'>Promociones</a></li>
+        <li><a href='contacto.html'>Contacto</a></li>
+        <li><a href='citas.html'>Agendar Cita</a></li>
+        <li><a href='cancelar_cita.html'>Cancelar Cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class='citas'>
+    <h2>Consultar / Cancelar Cita</h2>
+    <p>Ingresa tu nombre y celular para consultar o cancelar tus citas pendientes.</p>
+    
+    <form id='formBusquedaCita'>
+        <input type='text' id='nombreBusqueda' placeholder='Tu Nombre Completo' required>
+        <input type='tel' id='celularBusqueda' placeholder='Tu Número de Celular' required>
+        <button type='submit'>Buscar Cita</button>
+    </form>
+    
+    <div id="listaCitasContainer" style="display: none; margin-top: 20px;">
+        <h3>Lista de Citas Encontradas</h3>
+        <table id='tablaCitas'>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Correo</th> 
+              <th>Celular</th> 
+              <th>Servicio</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            </tbody>
+        </table>
+    </div>
+
+  </section>
+
+  <script src='js/main.js'></script>
+</body>
+</html>

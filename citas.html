@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Agendar Cita</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+<body>
+  <header>
+    <div class='logo'>BarberShop Style</div>
+    <nav>
+      <ul>
+        <li><a href='index.html'>Inicio</a></li>
+        <li><a href='servicios.html'>Servicios</a></li>
+        <li><a href='promociones.html'>Promociones</a></li>
+        <li><a href='contacto.html'>Contacto</a></li>
+        <li><a href='citas.html'>Agendar Cita</a></li>
+        <li><a href='cancelar_cita.html'>Cancelar Cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class='citas'>
+    <h2>Agendar Cita</h2>
+    <form id='formCita'>
+      <input type='text' id='nombre' placeholder='Nombre del cliente' required>
+      <input type='email' id='correo' placeholder='Correo Electrónico' required>
+      <input type='tel' id='celular' placeholder='Celular' required>
+
+      <select id='servicio'>
+        <option value=''>Seleccione servicio</option>
+        <option value='Adultos'>Adultos</option>
+        <option value='Arreglo de Barba'>Arreglo de Barba</option>
+        <option value='Niños'>Niños</option>
+        <option value='Pack: Corte + Barba'>Pack: Corte + Barba (PROMO)</option>
+        <option value='Pack: Padre + Hijo'>Pack: Padre + Hijo (PROMO)</option>
+        <option value='Miércoles de Estudiantes'>Miércoles de Estudiantes (PROMO)</option>
+      </select>
+
+      <input type='date' id='fecha'>
+      <input type='time' id='hora'>
+      <button type='submit'>Guardar Cita</button>
+    </form>
+  </section>
+
+  <script src='js/main.js'></script>
+</body>
+</html>
