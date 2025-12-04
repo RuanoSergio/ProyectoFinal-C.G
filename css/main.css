@@ -1,0 +1,499 @@
+/* ============================
+    1. IMPORTS Y VARIABLES
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --color-primario: #e63946;
+    --color-fondo-claro: #fafafa;
+    --color-fondo-oscuro: #111;
+    --color-sombra: rgba(0, 0, 0, 0.15);
+}
+
+/* ============================
+    2. ESTILOS BASE
+============================ */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 10px auto 40px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* ============================
+    3. ANIMACIONES
+============================ */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+    4. HEADER / NAV
+============================ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #111;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e63946;
+}
+
+/* ============================
+    5. HERO
+============================ */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('img/hero.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e63946;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #d62828;
+}
+
+/* ============================
+    6. COMPONENTES - CARDS
+============================ */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 25px; 
+    border-radius: 12px;
+    width: 280px; 
+    box-shadow: 0 6px 15px var(--color-sombra); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--color-fondo-oscuro);
+    margin-top: 5px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.card .description {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card .price {
+    font-size: 1.7rem;
+    color: var(--color-primario);
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.card-btn {
+    margin-top: 15px;
+    display: block;
+    text-transform: uppercase;
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: var(--color-primario);
+}
+
+/* ============================
+    7. TABLAS GENERALES (CITAS)
+============================ */
+#tablaCitas {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+#tablaCitas th, #tablaCitas td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#tablaCitas th {
+    background-color: #111;
+    color: #fff;
+}
+
+#tablaCitas button {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#tablaCitas button:hover {
+    background-color: #d62828;
+}
+
+/* ============================
+    8. GRID Y FORMULARIOS CONTACTO
+============================ */
+.contacto-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.contacto-info {
+    flex-basis: 40%;
+}
+
+.contacto-info h3 {
+    color: #e63946;
+    margin-top: 20px;
+}
+
+.contacto-info p {
+    margin: 5px 0;
+}
+
+.contacto-form-container {
+    color: #111;
+    flex-basis: 50%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contacto-form-container input[type="text"],
+.contacto-form-container input[type="email"],
+.contacto-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contacto-form-container textarea {
+    resize: vertical;
+}
+
+.contacto-form-container .btn {
+    width: 100%;
+    padding: 12px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 600;
+    color: #e63946;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #d62828;
+}
+
+/* ============================
+    9. MAPA
+============================ */
+.mapa-container {
+    max-width: 900px;
+    margin: 40px auto;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mapa-container iframe {
+    display: block;
+}
+
+/* ============================
+    10. SECCIONES PRINCIPALES
+============================ */
+.servicios, 
+.promociones, 
+.contacto, 
+.citas, 
+.reportes {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicios, .promociones {
+    padding: 80px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('../img/servicios.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.servicios h2, .promociones h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.servicios h2, .servicios .section-description,
+.promociones .section-description {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.contacto {
+    padding: 80px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../img/contacto.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.contacto h3 {
+    font-size: 1.5rem;
+}
+
+.citas {
+    padding: 80px 20px;
+    min-height: calc(100vh - 65px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../img/agendarCita.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.citas h3 {
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+.citas form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.citas input, .citas select, .citas button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.citas button {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.citas button:hover {
+    background-color: #d62828;
+}
+
+/* ============================
+    11. SERVICIOS DESTACADOS / PROMO DEL MES
+============================ */
+.servicios-destacados {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--color-fondo-claro);
+}
+
+.servicios-destacados h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.servicios-destacados .btn {
+    background-color: var(--color-fondo-oscuro);
+    color: #fff !important;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+.servicios-destacados .btn:hover {
+    background-color: var(--color-primario);
+}
+
+.promo-mes {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--color-fondo-oscuro);
+    color: #fff;
+}
+
+.promo-mes h2 {
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.promo-mes .section-description {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.promo-mes .btn {
+    background-color: var(--color-primario);
+    color: #fff !important;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.promo-mes .btn:hover {
+    background-color: #d62828;
+}
+
+.promo-mes .card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.promo-mes .card h3 {
+    color: var(--color-fondo-oscuro);
+}
+
+/* ============================
+    12. BOTÓN WHATSAPP
+============================ */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.whatsapp-btn img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn img:hover {
+    transform: scale(1.1);
+}
